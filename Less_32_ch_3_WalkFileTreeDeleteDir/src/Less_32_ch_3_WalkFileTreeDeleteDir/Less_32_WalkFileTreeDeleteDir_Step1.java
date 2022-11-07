@@ -13,8 +13,7 @@ import java.nio.file.Paths;
 public class Less_32_WalkFileTreeDeleteDir_Step1 {
     public static void main(String[] args) throws IOException {
         // Путь для удаления (папка для удаления)
-        Path dirForDel = Paths.get("E:\\JavaExtended\\Less_32_ch_3_WalkFileTreeDeleteDir\\" +
-                                       "src\\Less_32_ch_3_WalkFileTreeDeleteDir\\FolderForDel\\");
+        Path dirForDel = Paths.get("src\\Less_32_ch_3_WalkFileTreeDeleteDir\\FolderForDel");
         /*
         Запускаем статический метод *.walkFileTree() в которую передаем два
         параметра:
