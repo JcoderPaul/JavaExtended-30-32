@@ -41,10 +41,11 @@ import java.nio.file.Paths;
 
 public class Less_32_WalkFileTreeCopyDir_Step1 {
     public static void main(String[] args) throws IOException {
-        Path source = Paths.get("E:\\JavaExtended\\Less_32_ch_2_WalkFileTreeCopyDir\\" +
-                "src\\Less_32_ch_2_WalkFileTreeCopyDir\\FolderForCopy\\");
-        Path destination = Paths.get("E:\\JavaExtended\\Less_32_ch_2_WalkFileTreeCopyDir\\" +
-                "src\\Less_32_ch_2_WalkFileTreeCopyDir\\CopyHere\\");
+        Path source = Paths.get("src\\Less_32_ch_2_WalkFileTreeCopyDir\\FolderForCopy");
+        Path destination = Paths.get("src\\Less_32_ch_2_WalkFileTreeCopyDir\\CopyHere");
+        // Создаем папку куда будем копировать данные
+        Files.createDirectory(destination);
+
 
         Files.walkFileTree(source, new CopySimpleFileVisitor(source, destination));
     }
