@@ -14,7 +14,7 @@ import java.nio.channels.FileChannel;
 public class Less_30_ChanelBufferRead_Step1 {
     public static void main(String[] args) {
         // Прописываем путь к файлу
-        String file_path = "src\\Less_30_ch_1_FileChanelByteBuffer\\FilesForRead\\verse.txt";
+        String file_path = "src\\Less_30_ch_1_ChanelBufferRead\\FilesForRead\\verse.txt";
         /*
         Инициализируем класс RandomAccessFile, в параметры передаем путь к файлу
         и модификатор, который говорит, что файл откроется для чтения и записи.
