@@ -199,6 +199,7 @@ write() вызов до тех пор, пока в Buffer не закончат�
 ---
 **Доп. материал:**
 - [Java 25 Core Libraries - Java NIO (by ORACLE)](https://docs.oracle.com/en/java/javase/25/core/java-nio.html)
+- [The Java™ Tutorials - Basic I/O (by ORACLE DOC)](https://docs.oracle.com/javase/tutorial/essential/io/)
 - [Java NIO Tutorials](https://www.javacodegeeks.com/java-nio-tutorials)
 - [Introduction to Java NIO with Examples](https://www.geeksforgeeks.org/java/introduction-to-java-nio-with-examples/)
 - [Difference between Java IO and Java NIO](https://www.geeksforgeeks.org/java/difference-between-java-io-and-java-nio/)
