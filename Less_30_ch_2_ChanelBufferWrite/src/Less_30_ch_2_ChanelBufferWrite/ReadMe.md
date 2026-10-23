@@ -195,6 +195,12 @@ write() вызов до тех пор, пока в Buffer не закончат�
 - [Guide to Java FileChannel](https://www.baeldung.com/java-filechannel)
 - [Java NIO FileChannel](https://jenkov.com/tutorials/java-nio/file-channel.html)
 - [Guide to FileOutputStream vs. FileChannel](https://www.javacodegeeks.com/guide-to-fileoutputstream-vs-filechannel.html)
+- [Reading/Writing to/from Files using FileChannel and ByteBuffer in Java](https://www.javacodegeeks.com/2016/01/readingwriting-tofrom-files-using-filechannel-bytebuffer-java.html)
+- [Java FileChannel transferTo() and transferFrom() Examples](https://howtodoinjava.com/java/nio/transfer-data-between-channels/)
+- [Reading/Writing to/from Files using FileChannel and ByteBuffer in Java - Example Tutorial](https://javarevisited.blogspot.com/2016/01/reading-writing-files-using-filechannel-bytebuffer-example.html)
+- [FileChannel with Examples](https://programming-tips.jp/archives/a1/33/index.html)
+- [Guide to FileOutputStream vs. FileChannel](https://www.baeldung.com/java-fileoutputstream-filechannel-differences)
+- [AsynchronousFileChannel in Java NIO](https://www.geeksforgeeks.org/java/asynchronousfilechannel-in-java-nio/)
 
 ---
 **Доп. материал:**
