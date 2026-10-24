@@ -81,7 +81,7 @@ Path считается пустым путем, если он состоит т
 - `Path relativize(Path other)` - создает относительный путь между текущим путем и заданным путем. Для правильной работы метода необходимо сопоставлять пути одного типа:
 "относительный с относительным" либо "абсолютный с абсолютным" иначе хапнем: IllegalArgumentException: 'other' is different type of Path
 - `Path resolve(Path other)` - разрешить данный путь против текущего пути. По факту метод отобразит, как это могло бы быть. (см. пример [Less_31_Path_Step2](./Less_31_Path_Step2.java))
-- `Path resolve(String other)` - преобразует заданную строку пути в Path и разрешает ее Path точно так, как указано в методе resolve. (см. пример [Less_31_Path_Step2](https://github.com/JcoderPaul/JavaExtended-30-32/blob/master/Less_31_ch_1_Path/src/Less_31_ch_1_Path/Less_31_Path_Step2.java))
+- `Path resolve(String other)` - преобразует заданную строку пути в Path и разрешает ее Path точно так, как указано в методе resolve. (см. пример [Less_31_Path_Step2](./Less_31_Path_Step2.java))
 - `Path resolveSibling(Path other)` - разрешает данный путь против текущего parent пути.
 - `Path resolveSibling(String other)` - преобразует заданную строку пути в Path и разрешает ее относительно текущего parent пути точно так, как указано в методе resolveSiblin.
 - `boolean startsWith(Path other)` - проверяет, начинается ли текущий путь с заданного пути.
