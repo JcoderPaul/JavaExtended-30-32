@@ -62,15 +62,15 @@ move(), delete() и др. подобные методы.
 - `Object getAttribute(Path path, String 'attribute', LinkOption... options)` - считывает значение атрибута файла.
 
 Где `attribute` может принимать и возвращать:
-- "lastModifiedTime" - FileTime;
-- "lastAccessTime" - FileTime;
-- "creationTime" - FileTime;
-- "size" - Long;
-- "isRegularFile" - Boolean;
-- "isDirectory" - Boolean;
-- "isSymbolicLink" - Boolean;
-- "isOther" - Boolean;
-- "fileKey" - Object;
+  - "lastModifiedTime" - FileTime;
+  - "lastAccessTime" - FileTime;
+  - "creationTime" - FileTime;
+  - "size" - Long;
+  - "isRegularFile" - Boolean;
+  - "isDirectory" - Boolean;
+  - "isSymbolicLink" - Boolean;
+  - "isOther" - Boolean;
+  - "fileKey" - Object;
 
 - `<V extends FileAttributeView> V getFileAttributeView(Path path, Class<V> type, LinkOption... options)` - возвращает представление атрибутов файла заданного типа.
 - `FileStore getFileStore(Path path)` - возвращает FileStore представление хранилища файлов, в котором находится файл.
