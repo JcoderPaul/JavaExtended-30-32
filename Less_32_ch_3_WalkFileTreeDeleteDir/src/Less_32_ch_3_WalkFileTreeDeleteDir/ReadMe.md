@@ -9,5 +9,5 @@
 см. [Less_32_ch_1_WalkFileTree](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_32_ch_1_WalkFileTree/src/Less_32_ch_1_WalkFileTree)
 
 Данный метод в своей работе использует интерфейс FileVisitor:
-см. [FileVisitorInterface](../Less_32_ch_1_WalkFileTree/FileVisitorInterface.md)
+см. [FileVisitorInterface](../../Less_32_ch_1_WalkFileTree/FileVisitorInterface.md)
 
