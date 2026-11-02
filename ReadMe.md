@@ -1,39 +1,26 @@
-### ******** NIO API ********
+### NIO API
 
-Основное отличие между двумя подходами к организации ввода/вывода заключается в том,
-что IO API — потоко-ориентированное, а NIO API — буферо-ориентированное. Главные понятия
-в этом случае — понятия буфера (buffer) и канала (channel).
+Основное отличие между двумя подходами к организации ввода/вывода заключается в том, что [IO API](https://docs.oracle.com/javase/8/docs/api/java/io/package-summary.html) — потоко-ориентированное, 
+а [NIO API](https://docs.oracle.com/javase/8/docs/api/java/nio/package-summary.html) — буферо-ориентированное. Главные понятия в этом случае — понятия буфера (buffer) и канала (channel).
 
-Канал — это логический портал, через которые осуществляется ввод/вывод данных, а буфер
-является источником или приёмником этих переданных данных. При организации вывода данные,
-которые мы хотим отправить, помещаются в буфер, а он передает их в канал. При вводе, данные
-из канала помещаются в буфер.
+**Канал — это логический портал, через которые осуществляется ввод/вывод данных**, а буфер является источником или приёмником этих переданных данных. При организации вывода данные,
+которые мы хотим отправить, помещаются в буфер, а он передает их в канал. При вводе, данные из канала помещаются в буфер.
 
-По-другому буфер — это блок памяти, в который мы можем записывать информацию и из которого
-мы можем читать информацию, канал — это шлюз, который позволяет получить доступ к устройствам
+По-другому **буфер — это блок памяти, в который мы можем записывать информацию и из которого мы можем читать информацию**, канал — это шлюз, который позволяет получить доступ к устройствам
 ввода/вывода,таким, как файл или сокет.
 
-Каналы очень похожи на потоки в пакете java.io. Все данные, которые идут во вне или из вне,
-должны проходить через объект канала.
+Каналы очень похожи на потоки в пакете java.io. Все данные, которые идут во вне или из вне, должны проходить через объект канала.
 
-Т.е. чтобы использовать систему NIO, мы получаем канал к устройству ввода/вывода и буфер для
-хранения данных. Затем мы работаем с буфером, вводя или выводя данные по мере необходимости.
+Т.е. чтобы **использовать систему NIO, мы получаем канал к устройству ввода/вывода и буфер для хранения данных. Затем мы работаем с буфером, вводя или выводя данные по мере необходимости.**
 
-Особенность в том, что мы можетм двигаться по буферу вперед и назад, то есть, “гулять” по нему,
-чего не могли делать в потоках ввода-вывода. Это дает больше гибкости при обработке данных.
+Особенность в том, что мы можетм двигаться по буферу вперед и назад, то есть, “гулять” по нему, чего не могли делать в потоках ввода-вывода. Это дает больше гибкости при обработке данных.
 
-- [Less_30_ch_1_ChanelBufferRead](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_30_ch_1_ChanelBufferRead/src/Less_30_ch_1_ChanelBufferRead) - примеры использования классов и методов io.RandomAccessFile, 
-nio.ByteBuffer, nio.channels.FileChannel для чтения данных из файла (применение методов 
-*.getChannel(), *.allocate(), *.read(), *.flip(), *.hasRemaining(), *.clear(), *.get(), 
+- [Less_30_ch_1_ChanelBufferRead](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_30_ch_1_ChanelBufferRead/src/Less_30_ch_1_ChanelBufferRead) - примеры использования классов и методов io.RandomAccessFile, nio.ByteBuffer, nio.channels.FileChannel для чтения данных из файла (применение методов *.getChannel(), *.allocate(), *.read(), *.flip(), *.hasRemaining(), *.clear(), *.get(), 
 *.read(myBuffer))
 
-- [Less_30_ch_2_ChanelBufferWrite](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_30_ch_2_ChanelBufferWrite/src/Less_30_ch_2_ChanelBufferWrite) - примеры использования классов и методов io.RandomAccessFile, 
-nio.ByteBuffer, nio.channels.FileChannel для записи данных из файла (применение метода 
-*.wrap(), *.write(), *.put())
+- [Less_30_ch_2_ChanelBufferWrite](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_30_ch_2_ChanelBufferWrite/src/Less_30_ch_2_ChanelBufferWrite) - примеры использования классов и методов io.RandomAccessFile, nio.ByteBuffer, nio.channels.FileChannel для записи данных из файла (применение метода *.wrap(), *.write(), *.put())
 
-- [Less_30_ch_3_ChanelBufferMethods](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_30_ch_3_ChanelBufferMethods/src/Less_30_ch_3_ChanelBufferMethods) - примеры использования классов и методов io.RandomAccessFile, 
-nio.ByteBuffer, nio.channels.FileChannel для работы с буфером данных, чтение элементов буфера, 
-перемещение по элементам буфера, уплотнение буфера, установка маркера, возврат к маркированной
+- [Less_30_ch_3_ChanelBufferMethods](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_30_ch_3_ChanelBufferMethods/src/Less_30_ch_3_ChanelBufferMethods) - примеры использования классов и методов io.RandomAccessFile, nio.ByteBuffer, nio.channels.FileChannel для работы с буфером данных, чтение элементов буфера, перемещение по элементам буфера, уплотнение буфера, установка маркера, возврат к маркированной
 позиции буфера (применение методов *.get() *.rewind(), *.compact(), *.mark(), *.reset())
 
 - [Less_31_ch_1_Path](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_31_ch_1_Path/src/Less_31_ch_1_Path) - примеры использования методов интерфейса Path:
@@ -65,8 +52,21 @@ nio.ByteBuffer, nio.channels.FileChannel для работы с буфером �
 - [Less_32_ch_1_WalkFileTree](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_32_ch_1_WalkFileTree/src/Less_32_ch_1_WalkFileTree) - примеры работы с методом позволяющим обходить файловое дерево 
 Files.walkFileTree(), особенности применения интерфейса FileVisitor при работе этого метода.
 
-- [Less_32_ch_2_WalkFileTreeCopyDir](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_32_ch_2_WalkFileTreeCopyDir/src/Less_32_ch_2_WalkFileTreeCopyDir) - копирование (всего/определенного) содержимого заданной 
-директории при помощи методы Files.walkFileTree() и класса наследника SimpleFileVisitor.
+- [Less_32_ch_2_WalkFileTreeCopyDir](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_32_ch_2_WalkFileTreeCopyDir/src/Less_32_ch_2_WalkFileTreeCopyDir) - копирование (всего/определенного) содержимого заданной директории при помощи методы Files.walkFileTree() и класса наследника SimpleFileVisitor.
 
-- [Less_32_ch_3_WalkFileTreeDeleteDir](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_32_ch_3_WalkFileTreeDeleteDir/src/Less_32_ch_3_WalkFileTreeDeleteDir) - удаление (всего/определенного) содержимого заданной 
-директории при помощи методы Files.walkFileTree() и класса наследника SimpleFileVisitor.
+- [Less_32_ch_3_WalkFileTreeDeleteDir](https://github.com/JcoderPaul/JavaExtended-30-32/tree/master/Less_32_ch_3_WalkFileTreeDeleteDir/src/Less_32_ch_3_WalkFileTreeDeleteDir) - удаление (всего/определенного) содержимого заданной директории при помощи методы Files.walkFileTree() и класса наследника SimpleFileVisitor.
+
+---
+**Доп. материал:**
+- [Java Documentation](https://docs.oracle.com/en/java/index.html)
+- [Java NIO **(by ORACLE)**](https://docs.oracle.com/en/java/javase/27/core/java-nio.html)
+- [The Java™ Tutorials - Basic I/O **(by ORACLE)**](https://docs.oracle.com/javase/tutorial/essential/io/)
+- [Java Documentation - Java I/O, NIO, and NIO.2](https://docs.oracle.com/javase/8/docs/technotes/guides/io/index.html)
+- [Package java.io](https://docs.oracle.com/javase/8/docs/api/java/io/package-summary.html)
+- [Package java.nio](https://docs.oracle.com/javase/8/docs/api/java/nio/package-summary.html)
+
+---
+- [Основные отличия Java IO и Java NIO](https://habr.com/ru/articles/235585/)
+- [OpenJDK](https://openjdk.org/)
+- [Java IO vs NIO](https://www.baeldung.com/java-io-vs-nio)
+- [New I/O APIs **(by ORACLE)**](https://docs.oracle.com/javase/1.5.0/docs/guide/nio/index.html)
